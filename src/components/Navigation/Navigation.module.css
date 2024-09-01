@@ -1,0 +1,22 @@
+.pageNav {
+  display: flex;
+  gap: 10px;
+  padding: 30px 50px;
+  border-bottom: 1px solid orange;
+}
+
+.pageNavLink {
+  color: white;
+  padding: 5px 0;
+  font-size: 20px;
+  transition: color 250ms linear;
+}
+
+.pageNavLink:hover {
+  color: orange;
+}
+
+.linkActive {
+  border-bottom: 1px solid orange;
+  color: orange;
+}
