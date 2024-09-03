@@ -1,0 +1,28 @@
+.searchForm {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  gap: 10px;
+}
+
+.searchInput {
+  width: 300px;
+  color: white;
+  padding: 5px 0 5px 10px;
+  outline: none;
+  border-color: orange;
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+.searchInput:hover,
+.searchInput:focus {
+  border-color: orange;
+}
+
+.submitBtn:hover,
+.submitBtn:focus,
+.submitBtn:active {
+  border-color: orange;
+  outline: none;
+}

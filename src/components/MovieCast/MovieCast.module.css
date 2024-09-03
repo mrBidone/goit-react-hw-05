@@ -1,0 +1,19 @@
+.castList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.listItem {
+  flex-basis: calc((100% - 60px) / 5);
+}
+
+.castImage {
+  height: 250px;
+}
+
+.castName {
+}
+
+.castCharacter {
+}

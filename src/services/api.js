@@ -1,17 +1,4 @@
 import axios from "axios";
-// const options = {
-//   method: "GET",
-//   headers: {
-//     accept: "application/json",
-//     Authorization:
-//       "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZDI1MmY5MGQ0Y2Y4Y2FlMjBlM2Y4MTM2MDJkMzEwNyIsIm5iZiI6MTcyNTEzMDM4OS44NDc2MzYsInN1YiI6IjY2ZDM2NTU4NjZlZTk2ODU0ZGMwZDc3ZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.VGZeho_20YTib0pWBNgCJrcleulT6-9ACIV5cx3KkKc",
-//   },
-// };
-
-// fetch("https://api.themoviedb.org/3/trending/movie/day?language=en-US", options)
-//   .then((response) => response.json())
-//   .then((response) => console.log(response))
-//   .catch((err) => console.error(err));
 
 axios.defaults.baseURL = "https://api.themoviedb.org/3";
 
@@ -41,4 +28,12 @@ export const requestMovieCast = async (movieId) => {
 export const requestMovieReviews = async (movieId) => {
   const response = await axios.get(`movie/${movieId}/reviews`, options);
   return response.data.results;
+};
+
+export const requestMovieBySearch = async (searchQuery) => {
+  const response = await axios.get(
+    `search/movie?query=${searchQuery}&include_adult=false&language=en-US&page=1`,
+    options
+  );
+  return response.data;
 };
