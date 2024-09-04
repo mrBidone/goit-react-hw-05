@@ -37,6 +37,7 @@ const MovieCast = () => {
                 className={css.castImage}
                 src={imgUrl + profile_path}
                 alt={name + " photo"}
+                height="250"
               />
               <p className={css.castName}>{name}</p>
               <p className={css.castCharacter}>{character}</p>
