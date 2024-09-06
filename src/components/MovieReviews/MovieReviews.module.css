@@ -1,0 +1,36 @@
+.reviewsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reviewsItem {
+  padding: 10px;
+  border: 1px solid white;
+}
+
+.reviewWrapper {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.titleReviewWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviewsNoAvatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  border: 1px solid white;
+}
+
+.reviewsAvatar {
+  height: 100px;
+  border-radius: 100%;
+  border: 1px solid white;
+}

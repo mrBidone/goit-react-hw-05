@@ -3,6 +3,7 @@ import { requestMovieCast } from "../../services/api";
 import { useParams } from "react-router-dom";
 import Loader from "../Loader/Loader";
 import css from "./MovieCast.module.css";
+import { FaUser } from "react-icons/fa";
 
 const MovieCast = () => {
   const [cast, setCast] = useState(null);
@@ -33,12 +34,19 @@ const MovieCast = () => {
         cast.map(({ id, name, character, profile_path }) => {
           return (
             <li className={css.listItem} key={id}>
-              <img
-                className={css.castImage}
-                src={imgUrl + profile_path}
-                alt={name + " photo"}
-                height="250"
-              />
+              {profile_path === null ? (
+                <div className={css.noPhoto}>
+                  <FaUser />
+                  <p>No photo</p>
+                </div>
+              ) : (
+                <img
+                  className={css.castImage}
+                  src={imgUrl + profile_path}
+                  alt={name + " photo"}
+                  height="250"
+                />
+              )}
               <p className={css.castName}>{name}</p>
               <p className={css.castCharacter}>{character}</p>
             </li>

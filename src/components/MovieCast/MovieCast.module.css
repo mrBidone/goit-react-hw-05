@@ -8,11 +8,12 @@
   flex-basis: calc((100% - 60px) / 5);
 }
 
-.castImage {
-}
-
-.castName {
-}
-
-.castCharacter {
+.noPhoto {
+  display: flex;
+  height: 250px;
+  width: 166px;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+  flex-direction: column;
 }
