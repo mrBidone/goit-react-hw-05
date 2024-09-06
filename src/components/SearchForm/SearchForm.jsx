@@ -5,6 +5,7 @@ const SearchForm = ({ onSubmit }) => {
     <>
       <form className={css.searchForm} onSubmit={onSubmit}>
         <input
+          // defaultValue={defaultSearchValue}
           className={css.searchInput}
           type="text"
           name="query"
