@@ -49,16 +49,14 @@ const MoviesPage = () => {
       setIsLoading(true);
       try {
         const { results } = await requestMovieBySearch(queryValue);
-        setTimeout(() => {
-          if (results.length === 0) {
-            setNoResult(true);
-            setIsLoading(false);
-          } else {
-            setSearchMovie(results);
-            setIsLoading(false);
-            setNoResult(false);
-          }
-        }, 1000);
+        if (results.length === 0) {
+          setNoResult(true);
+          setIsLoading(false);
+        } else {
+          setSearchMovie(results);
+          setIsLoading(false);
+          setNoResult(false);
+        }
       } catch (err) {
         setError(err.message);
         setIsLoading(false);
