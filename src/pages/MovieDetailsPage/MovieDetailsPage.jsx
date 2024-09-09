@@ -8,9 +8,7 @@ const MovieDetailsPage = () => {
   const [movieDetails, setMovieDetails] = useState(null);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-
   const { movieId } = useParams();
-
   const location = useLocation();
   const goBackLink = useRef(location.state?.from ?? "/movies");
 
@@ -19,10 +17,8 @@ const MovieDetailsPage = () => {
       setIsLoading(true);
       try {
         const response = await requestMovieDetails(movieId);
-        setTimeout(() => {
-          setMovieDetails(response);
-          setIsLoading(false);
-        }, 1000);
+        setMovieDetails(response);
+        setIsLoading(false);
       } catch (err) {
         setError(err.message);
       }
