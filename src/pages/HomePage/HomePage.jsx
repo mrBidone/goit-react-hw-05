@@ -13,10 +13,8 @@ const HomePage = () => {
       setIsLoading(true);
       try {
         const response = await requestAllTrendMovies();
-        setTimeout(() => {
-          setTrendsMovies(response.results);
-          setIsLoading(false);
-        }, 1500);
+        setTrendsMovies(response.results);
+        setIsLoading(false);
       } catch (err) {
         setError(err.message);
         setIsLoading(false);
